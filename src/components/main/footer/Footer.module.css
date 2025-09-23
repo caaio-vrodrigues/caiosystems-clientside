@@ -1,0 +1,11 @@
+.foot{
+  min-height: 80px;
+  margin-top: auto;
+  max-width: var(--maxWidthCentralize);
+  color: var(--colorPrimary);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Goldman", sans-serif;
+}

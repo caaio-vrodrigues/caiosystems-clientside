@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap&family=Goldman:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: var(--bgHtml);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin-inline: auto;
+  max-width: 100rem;
+  font-family: 'Arimo', Arial, sans-serif;
+  background-color: var(--bgPrimary);
+}
+
+:root{
+  --bgPrimary: rgb(248, 248, 248);
+  --bgHtml: rgb(40, 38, 38);
+}

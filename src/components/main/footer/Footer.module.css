@@ -1,11 +1,54 @@
 .foot{
   min-height: 80px;
   margin-top: auto;
-  max-width: var(--maxWidthCentralize);
   color: var(--colorPrimary);
+  border-top: 1px solid var(--colorPrimary);
   padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Goldman", sans-serif;
+}
+
+.footTitle{
+  text-align: center;
+}
+
+.footTitle h2{
+  font-size: var(--fontSizePrimary);
+  font-weight: 400;
+}
+
+.copy{
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+}
+
+.copy p{
+  font-size: var(--fontSizePrimary);
+}
+
+.copy svg{
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 270px){
+  .copy{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .copy svg{
+    margin-top: 0.2rem;
+  }
+
+  .footTitle p{
+    font-size: 14px;
+  }
+
+  .footTitle h2{
+    font-size: 14px;
+  }
 }

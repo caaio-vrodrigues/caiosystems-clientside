@@ -1,4 +1,6 @@
+import styles from "./Main.module.css";
+
 export const Main = () => 
-  <main>
-    Main Content
+  <main className={styles.main}>
+    Hello main
   </main>

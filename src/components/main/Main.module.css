@@ -1,0 +1,14 @@
+.main{
+  position: relative;
+  color: var(--colorPrimary);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: var(--paddingMain);
+}
+
+@media screen and (max-width: 600px){
+  .main{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

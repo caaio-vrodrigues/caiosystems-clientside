@@ -97,7 +97,6 @@
     margin-right: 1rem;
   }
 
-
   .rightBlock svg{
     width: .7rem;
     height: .7rem;
@@ -110,6 +109,10 @@
 }
 
 @media screen and (max-width: 270px){
+  .header{
+    padding-left: .4rem;
+    padding-right: .4rem;
+  }
   .centerBlock h1{
     font-size: 14px;
   }

@@ -28,6 +28,7 @@ body{
   --bgHtml: rgb(40, 38, 38);
   --colorPrimary: rgb(14, 91, 180);
   --colorPrimaryHover: rgb(102, 168, 225);
+  --purpleBlue: rgba(42, 14, 180, 0.693);
   
   --fontSizeText: 14px;
   --fontSizePrimary: 17px;

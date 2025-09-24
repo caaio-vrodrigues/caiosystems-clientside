@@ -1,0 +1,63 @@
+.buttonBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 15rem;
+  margin-bottom: .5rem;
+}
+
+.buttonBlock span{
+  font-size: 15px;
+  color: var(--purpleBlue);
+  max-width: 24rem;
+  hyphens: auto;
+  text-align: justify;
+  letter-spacing: .8px;
+  line-height: var(--lineHeight);
+  background-color: rgba(255, 255, 255, 0.627);
+  padding: .1rem .3rem;
+  border-radius: 2px;
+}
+
+.buttonBlock button{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--colorPrimary);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition: var(--transition);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttonBlock button:hover{
+  transition: var(--transition);
+  color:  var(--colorPrimaryHover);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 360px){
+  .buttonBlock span{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .buttonBlock button{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media screen and (max-width: 265px){
+  .buttonBlock{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttonBlock span{
+    text-align: center;
+  }
+}

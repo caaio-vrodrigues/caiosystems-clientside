@@ -28,9 +28,11 @@
   color: var(--purpleBlue);
   height: 1.5rem;
   width: 1.5rem;
+  transition: var(--transition);
 }
 
 .wrapIcons svg:hover{
+  transition: var(--transition);
   color: var(--colorPrimaryHover);
 }
 

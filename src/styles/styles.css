@@ -31,6 +31,8 @@ body{
   
   --fontSizeText: 14px;
   --fontSizePrimary: 17px;
+  --lineHeight: 1.38rem;
+  --letterSpacingText: .8px;
 
   --sizeIcon: 22px;
 }

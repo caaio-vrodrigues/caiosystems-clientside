@@ -1,0 +1,74 @@
+.contactContainer{
+  margin: 4rem 0;
+}
+
+.contact{
+  margin: auto;
+  margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 10rem;
+}
+
+.iconContact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconContact svg{
+  width: var(--sizeIcon);
+  height: var(--sizeIcon);
+  color: var(--colorPrimary);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.iconContact svg:hover{
+  transition: .2s;
+  color: var(--colorPrimaryHover);
+}
+
+.wrapCertificate{
+  border-top: 1px solid;
+  width: 11rem;
+  margin: auto;
+  text-align: center;
+  padding-top: .5rem;
+}
+
+.wrapCertificate a{
+  display: flex;
+  text-decoration: none;
+  color: var(--colorPrimary);
+  width: 7.3rem;
+  margin: auto;
+  transition: .2s;
+}
+
+.wrapCertificate a:hover{
+  transition: .2s;
+  color: var(--colorPrimaryHover);
+}
+
+.wrapCertificate svg{
+  height: 2rem;
+  width: 2rem;
+}
+
+.wrapCertificate h2{
+  font-size: var(--fontSizeText);
+  margin-left: auto;
+}
+
+@media screen and (max-width: 230px){
+  .wrapCertificate{
+    width: 6.5rem;
+    margin: 0 0;
+  }
+
+  .wrapCertificate a{
+    display: block;
+    width: inherit;
+  }
+}

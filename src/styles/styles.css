@@ -25,5 +25,7 @@ body{
   --bgPrimary: rgb(248, 248, 248);
   --bgHtml: rgb(40, 38, 38);
   --colorPrimary: rgb(14, 91, 180);
+  
   --fontSizePrimary: 17px;
+  --sizeIcon: 22px;
 }

@@ -1,3 +1,5 @@
+import { Card } from './card/Card';
+import{ cardInfos, workSummary } from '@/data/descriptionData';
 import styles from './Description.module.css';
 
 export const Description = () =>
@@ -5,13 +7,16 @@ export const Description = () =>
     <h1>Descrição</h1>
     <div className={styles.cardsContainer}>
       <div className={`${styles.wrapCards} ${styles.leftWrapCards}`}>
-        <article className={`${styles.card}`}>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ut!</p>
-        </article>
+        {cardInfos.map(infos => 
+          <Card 
+            key={infos.id}
+            text={infos.text}
+            link={infos.link}
+            linkTxt={infos.linkTxt}/>)}
       </div>
       <div className={`${styles.wrapCards} ${styles.rightWrapCard}`}>
         <h2>Breve resumo sobre meu trabalho</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, iure.</p>
+        <p>{workSummary}</p>
       </div>
     </div>
   </section>

@@ -11,3 +11,9 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+.form{
+  color: black;
+  width: 250px;
+  height: 250px;
+}

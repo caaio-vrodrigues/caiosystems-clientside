@@ -1,0 +1,72 @@
+.secDescription{
+  border-top: 1px solid rgb(14, 91, 180);
+  padding-top: 1rem;
+}
+
+.secDescription h1{
+  font-size: var(--fontSizePrimary);
+  margin-bottom: 1rem;
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+}
+
+.secDescription h2{
+  font-size: var(--fontSizePrimary);
+  margin-bottom: 1rem;
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  border-bottom: 1px solid var(--colorPrimary);
+  padding-bottom: .3rem;
+  width: fit-content;
+}
+
+.cardsContainer{
+  display: flex;
+}
+
+.wrapCards{
+  width: 50%;
+  letter-spacing: var(--letterSpacingText);
+}
+
+.leftWrapCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  padding-right: 1rem;
+}
+
+.rightWrapCard{
+  border-left: 1px solid rgb(14, 91, 180);
+  padding-left: 1rem;
+  hyphens: auto;
+}
+
+.rightWrapCard p{
+  text-align: justify;
+  line-height: var(--lineHeight);
+  font-size: var(--fontSizeText);
+}
+
+@media screen and (max-width: 430px){
+  .cardsContainer{
+    display: block;
+  }
+
+  .leftWrapCards{
+    width: 100%;
+  }
+
+  .rightWrapCard{
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .wrapCards{
+    font-size: 14px;
+    display: contents;
+  }
+}
+

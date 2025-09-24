@@ -1,0 +1,27 @@
+.welcome{
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  border-radius: 5px;
+  font-size: var(--fontSizeText);
+  font-weight: 600;
+}
+
+.videoBlock{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 2rem 0;
+}
+
+.videoBlock iframe{
+  width: 450px;
+  min-width: 7rem;
+  height: 280px;
+  border-radius: 5px;
+}
+
+.spanOla{
+  margin-bottom: .38rem;
+}

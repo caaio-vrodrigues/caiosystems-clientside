@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowsTurnRight } from '@fortawesome/free-solid-svg-icons';
 import styles from './Welcome.module.css';
 import { Card } from './card/Card';
+import { EndWelcome } from './end-welcome/EndWelcome';
 
 export const Welcome = () => {
   const [skipPresentation, setSkipPresentation] = useState<boolean>(false);
@@ -25,5 +26,7 @@ export const Welcome = () => {
           </div> 
       }
     })}
+    {skipPresentation && <EndWelcome/>}
+    {currentPage == allPages.length && !skipPresentation && <EndWelcome/>}
   </>
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import '@/styles/styles.css';
+import { ContextProvider } from "@/context/ContextProvider";
 
 export const metadata: Metadata = {
   title: "Caio Systems Portfólio",
@@ -12,7 +13,9 @@ type Props = Readonly<{children: React.ReactNode;}>
 const RootLayout = ({ children }: Props) => 
   <html lang="pt-BR">
     <body suppressHydrationWarning={true}>
-      {children}
+      <ContextProvider>
+        {children}
+      </ContextProvider>
     </body>
   </html>
 

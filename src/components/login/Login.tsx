@@ -6,6 +6,7 @@ import { NewAccount } from './new-account/NewAccount';
 import { useContext } from 'react';
 import { ContextMaster } from '@/context/ContextProvider';
 import styles from './Login.module.css';
+import { Welcome } from '../login/welcome/Welcome';
 
 export const Login = () => {
   const { endPreview } = useContext(ContextMaster);
@@ -17,7 +18,7 @@ export const Login = () => {
           <NewAccount/>
           <Form/>
         </> 
-        : "Welcome!"}
+        : <Welcome/>}
       <BottomSec/>
     </div>
   );

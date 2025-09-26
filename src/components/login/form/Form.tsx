@@ -1,48 +1,50 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseUser } from '@fortawesome/free-solid-svg-icons';
 import styles from './Form.module.css';
+import { ContextMaster } from '@/context/ContextProvider';
+import { createUser, loginAcces } from '@/server/connection/conn';
 
 export const Form = () => {
-  const [email, setEmail] = useState('caio@12');
-  const [password, setPassword] = useState('12345678');
+  const [password, setPassword] = useState<string>('');
+  const { 
+    setErrMsg, setLoading, createAccount, setCreateAccount, username, 
+    setUsername, 
+  } = useContext(ContextMaster);
   const router = useRouter();
 
-  const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    try {
-      const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
-      const response = await fetch(`${SERVER_URL}/user/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          username: email,
-          password: password,
-        }).toString(),
-      });
-
-      if (response.ok) {
-        const isLoggedIn = await response.json();
-        if (isLoggedIn) router.push('/');
-        router.push('/login');
-      } 
-      console.error(`Falha no login, dados inválidos`);
-    } catch (error) {
-      console.error('Erro na requisição:', error);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setErrMsg(null);
+    setLoading(true);
+    try{
+      if(createAccount){
+        await createUser({username, password});
+        setCreateAccount(false);
+        router.replace('/login');
+      }
+      else{
+        await loginAcces({username, password});
+        router.replace('/');
+      }
+    } 
+    catch(e){
+      setErrMsg((e as Error).message || 'Ocorreu um erro inesperado.');
+    }
+    finally{
+      setPassword('');
+      setLoading(false);
     }
   };
 
   return <>
     <div className={styles.loginTitle}>
-      <h1>Login</h1>
+      <h1>{!createAccount ? 'LOGIN': 'CADASTRAR'}</h1>
     </div>
-    <form className={styles.formLogin} onSubmit={handleLogin}>
+    <form className={styles.formLogin} onSubmit={handleSubmit}>
       <div className={`${styles.wrapInput} ${styles.wrapInputEmail}`}>
         <input
           type="email"
@@ -50,8 +52,8 @@ export const Form = () => {
           name="email"
           autoComplete="username"
           required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
       </div>
       <div className={`${styles.wrapInput} ${styles.wrapInputPassword}`}>

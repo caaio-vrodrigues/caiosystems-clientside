@@ -24,9 +24,9 @@ export const Login = () => {
         </div> : 
         <>
           <TopSec/>
+          {errMsg && <p>{errMsg}</p>}
           {endPreview ? 
             <>
-              {errMsg && <p>{errMsg}</p>}
               {!errMsg && loading &&
                 <div className={styles.wrapSpinner}>
                   <span>Aguarde...</span>

@@ -23,6 +23,7 @@ export const loginAcces = async ({ username, password }: Props) => {
       username: username,
       password: password,
     }).toString(),
+    credentials: 'include',
   });
   return handleResponse(response);
 }
@@ -37,6 +38,22 @@ export const createUser = async ({ username, password }: Props) => {
       username: username,
       password: password,
     }).toString(),
+    credentials: 'include',
   });
   return handleResponse(response);
+}
+
+export const checkAuth = async () => {
+  const response = await fetch(`${SERVER_URL}/user/auth`, {
+    method: 'GET',
+    credentials: 'include',
+  });
+  return handleResponse(response);
+};
+
+export const logout = async () => {
+  await fetch(`${SERVER_URL}/logout`, {
+    method: 'POST',
+    credentials: 'include',
+  });
 }

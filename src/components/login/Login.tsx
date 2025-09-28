@@ -7,7 +7,8 @@ import { useContext, useEffect, useState } from 'react';
 import { ContextMaster } from '@/context/ContextProvider';
 import styles from './Login.module.css';
 import { Welcome } from '../login/welcome/Welcome';
-import { Spinner } from '../util/Spinner';
+import { Error } from '../util/error/Error';
+import { Wait } from '../util/wait/Wait';
 
 export const Login = () => {
   const [ preLoad, setPreLoad ] = useState<boolean>(true);
@@ -17,21 +18,13 @@ export const Login = () => {
 
   return (
     <div className={styles.loginContainer}>
-      {preLoad ?  
-        <div className={styles.wrapSpinner}>
-          <span>Aguarde...</span>
-          <Spinner login={false}/>
-        </div> : 
+      {preLoad ? <Wait/> : 
         <>
           <TopSec/>
-          {errMsg && <p>{errMsg}</p>}
+          {errMsg && <Error/>}
           {endPreview ? 
             <>
-              {!errMsg && loading &&
-                <div className={styles.wrapSpinner}>
-                  <span>Aguarde...</span>
-                  <Spinner login={false}/>
-                </div>}
+              {!errMsg && loading && <Wait/>}
               {!errMsg && !loading &&
                 <>
                   <NewAccount/>

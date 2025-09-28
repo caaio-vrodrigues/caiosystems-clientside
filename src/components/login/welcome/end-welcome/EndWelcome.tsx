@@ -1,6 +1,6 @@
 import { useEffect, useContext } from 'react';
 import { ContextMaster } from '@/context/ContextProvider';
-import { Spinner } from '@/components/util/Spinner';
+import { Spinner } from '@/components/util/spinner/Spinner';
 import styles from './EndWelcome.module.css';
 
 export const EndWelcome = () => {

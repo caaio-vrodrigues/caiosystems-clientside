@@ -1,0 +1,11 @@
+.wrapMsg{
+  color: var(--colorPrimary);
+  hyphens: auto;
+  font-size: var(--fontSizeText);
+}
+
+@media screen and (max-width: 250px){
+  .wrapMsg p{
+    font-size: 14px;
+  }
+}

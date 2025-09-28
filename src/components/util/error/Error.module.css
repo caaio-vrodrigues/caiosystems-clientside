@@ -1,0 +1,31 @@
+.wrapMsg{
+  color: rgb(211, 88, 88);
+  max-width: 90%;
+  hyphens: auto;
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: .5rem;
+  border: 1px solid var(--colorPrimary);
+  background-color: rgba(243, 250, 255, 0.914);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: var(--fontSizeText);
+  line-height: var(--lineHeight);
+}
+
+.loading{
+  color: #c6c7c9;
+}
+
+@media screen and (max-width: 250px){
+  .wrapMsg{
+    margin: 0;
+    padding: 0;
+    margin-top: .3rem;
+  }
+
+  .wrapMsg p{
+    padding: .3rem;
+    font-size: 14px;
+  }
+}

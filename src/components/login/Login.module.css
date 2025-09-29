@@ -12,8 +12,20 @@
   background-position: center center;
 }
 
-.form{
-  color: black;
-  width: 250px;
-  height: 250px;
+.containerModal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  position: absolute;
+  width: fit-content;
+  min-height: 18rem;
+  padding: 1rem;
+  min-width: 244px;
+  margin: 0 1rem;
+  border: 1px solid var(--colorPrimary);
+  background-color: rgba(243, 250, 255, 0.914);
+  border-radius: 5px;
+  font-size: var(--fontSizeText);
 }

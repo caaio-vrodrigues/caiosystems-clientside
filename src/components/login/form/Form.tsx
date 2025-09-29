@@ -3,7 +3,7 @@
 import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseUser } from '@fortawesome/free-solid-svg-icons';
+import { faHouseUser, faShare } from '@fortawesome/free-solid-svg-icons';
 import styles from './Form.module.css';
 import { ContextMaster } from '@/context/ContextProvider';
 import { createUser, loginAcces } from '@/server/connection/conn';
@@ -12,7 +12,7 @@ export const Form = () => {
   const [password, setPassword] = useState<string>('');
   const { 
     setErrMsg, setLoading, createAccount, setCreateAccount, username, 
-    setUsername, 
+    setUsername, setSuccessAssign,
   } = useContext(ContextMaster);
   const router = useRouter();
 
@@ -25,6 +25,7 @@ export const Form = () => {
         await createUser({username, password});
         setCreateAccount(false);
         router.replace('/login');
+        setSuccessAssign(true);
       }
       else{
         await loginAcces({username, password});
@@ -71,7 +72,8 @@ export const Form = () => {
           type="submit"
           className={styles.submitBtn}
         >
-          <FontAwesomeIcon icon={faHouseUser} />
+          {createAccount ? 'enviar '  : 'entrar '} 
+            <FontAwesomeIcon icon={createAccount ? faShare : faHouseUser} />
         </button>
       </div>
     </form>

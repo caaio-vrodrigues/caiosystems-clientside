@@ -14,12 +14,14 @@ type TContextMaster = {
   loading: boolean,
   createAccount: boolean,
   username: string,
+  succesAssign: boolean,
   setEndPreview: Dispatch<SetStateAction<boolean>>,
   setCurrentPage: Dispatch<SetStateAction<number>>,
   setErrMsg: Dispatch<SetStateAction<string|null>>,
   setLoading: Dispatch<SetStateAction<boolean>>,
   setCreateAccount: Dispatch<SetStateAction<boolean>>,
   setUsername: Dispatch<SetStateAction<string>>,
+  setSuccessAssign: Dispatch<SetStateAction<boolean>>,
 }
 
 export const ContextMaster = createContext<TContextMaster>({
@@ -29,6 +31,7 @@ export const ContextMaster = createContext<TContextMaster>({
   loading: false, setLoading: ()=>{},
   createAccount: false, setCreateAccount: ()=>{},
   username: '', setUsername: ()=>{},
+  succesAssign: false, setSuccessAssign: ()=>{},
 });
 
 export const ContextProvider = ({ children }: ProviderProps): React.ReactNode =>{
@@ -38,10 +41,12 @@ export const ContextProvider = ({ children }: ProviderProps): React.ReactNode =>
   const [loading, setLoading] = useState<boolean>(false);
   const [createAccount, setCreateAccount] = useState<boolean>(false);
   const [username, setUsername] = useState<string>('');
+  const [succesAssign, setSuccessAssign] = useState<boolean>(false);
 
   const contextValue: TContextMaster = { 
     endPreview, setEndPreview, currentPage, setCurrentPage, errMsg, setErrMsg,
     loading, setLoading, createAccount, setCreateAccount, username, setUsername,
+    succesAssign, setSuccessAssign,
   }
 
   return (

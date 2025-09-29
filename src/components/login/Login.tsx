@@ -9,10 +9,11 @@ import styles from './Login.module.css';
 import { Welcome } from '../login/welcome/Welcome';
 import { Error } from '../util/error/Error';
 import { Wait } from '../util/wait/Wait';
+import { ModalSuccesAssign } from '../util/modal/ModalSuccesAssign';
 
 export const Login = () => {
   const [ preLoad, setPreLoad ] = useState<boolean>(true);
-  const { endPreview, errMsg, loading } = useContext(ContextMaster);
+  const { endPreview, errMsg, loading, succesAssign } = useContext(ContextMaster);
 
   useEffect(()=>{setTimeout(()=>setPreLoad(false), 500)}, []);
 
@@ -32,6 +33,8 @@ export const Login = () => {
                 </>}
             </> 
             : !errMsg && !loading && <Welcome/>}
+            {succesAssign && 
+              <div className={styles.containerModal}><ModalSuccesAssign/></div>}
           <BottomSec/>
         </>}
     </div>

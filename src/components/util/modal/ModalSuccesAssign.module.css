@@ -1,0 +1,50 @@
+.modal span{
+  hyphens: auto;
+  text-align: justify;
+  letter-spacing: .3px;
+  font-weight: 500;
+  color: var(--colorPrimary);
+  padding: 5px;
+  border-radius: 3px;
+  line-height: var(--lineHeight);
+}
+
+.wrapIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+.wrapIcon button{
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.wrapIcon svg{
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  color: rgba(4, 195, 125, 0.664);
+  transition: var(--transition);
+  margin: 1rem;
+  background-color: white;
+  padding: .5rem;
+  border-radius: 50% 50%;
+  border: 1px solid rgba(4, 195, 125, 0.664);
+}
+
+.modal svg:hover{
+  transition: var(--transition);
+  color: white;
+  border: 1px solid white;
+  background-color: rgba(4, 195, 125, 0.664);
+}
+
+@media screen and (max-width: 260px){
+  .modal{
+    min-width: 10rem;
+  }
+}

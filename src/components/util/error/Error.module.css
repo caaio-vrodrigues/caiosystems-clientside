@@ -1,4 +1,8 @@
 .wrapMsg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: rgb(211, 88, 88);
   max-width: 90%;
   hyphens: auto;
@@ -15,6 +19,37 @@
 
 .loading{
   color: #c6c7c9;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .5rem;
+  padding: .2rem;
+  padding-left: .4rem;
+  padding-right: .4rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--colorPrimary);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button:hover{
+  transition: var(--transition);
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--colorPrimary);
+}
+
+.button span{
+  margin-left: .3rem;
+}
+
+.button svg{
+  width: .8rem;
+  height: .8rem;
 }
 
 @media screen and (max-width: 250px){

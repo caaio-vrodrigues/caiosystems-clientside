@@ -14,7 +14,7 @@ export const Header = () => {
   const handleLogout = async () => {
     try{ await logout() }
     catch(e){ 
-      setErrMsg((e as Error).message || 'Ocorreu um erro inesperado.'); 
+      setErrMsg((e as Error).message || 'Ocorreu um erro inesperado.');
     }
     finally{ router.replace('/login') }
   }

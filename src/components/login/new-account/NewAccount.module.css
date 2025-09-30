@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.buttonBlock svg{
+  margin-left: .2rem;
+}
+
 @media screen and (max-width: 360px){
   .buttonBlock span{
     padding-left: 5px;

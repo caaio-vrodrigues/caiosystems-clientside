@@ -1,5 +1,5 @@
 import { Card } from './card/Card';
-import{ cardInfos, workSummary } from '@/data/descriptionData';
+import { cardInfos, workSummary } from '@/data/descriptionData';
 import styles from './Description.module.css';
 
 export const Description = () =>

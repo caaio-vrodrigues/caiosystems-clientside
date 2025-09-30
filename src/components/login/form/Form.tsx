@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -73,7 +72,7 @@ export const Form = () => {
           className={styles.submitBtn}
         >
           {createAccount ? 'enviar '  : 'entrar '} 
-            <FontAwesomeIcon icon={createAccount ? faShare : faHouseUser} />
+          <FontAwesomeIcon icon={createAccount ? faShare : faHouseUser} />
         </button>
       </div>
     </form>

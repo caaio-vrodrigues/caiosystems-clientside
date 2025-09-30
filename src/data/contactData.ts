@@ -11,7 +11,7 @@ export const contacts = [
   },
   {
     id: 1,
-    link: 'https://www.linkedin.com/in/caio-programador/',
+    link: 'https://www.linkedin.com/in/caio-v-rodrigues-5b0aa5383/',
     icon: faLinkedin,
   },
   {
@@ -25,5 +25,3 @@ export const contacts = [
     icon: faWhatsapp,
   },
 ];
-
-  

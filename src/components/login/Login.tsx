@@ -13,7 +13,9 @@ import { ModalSuccesAssign } from '../util/modal/ModalSuccesAssign';
 
 export const Login = () => {
   const [ preLoad, setPreLoad ] = useState<boolean>(true);
-  const { endPreview, errMsg, loading, succesAssign } = useContext(ContextMaster);
+  const { 
+    endPreview, errMsg, loading, succesAssign 
+  } = useContext(ContextMaster);
 
   useEffect(()=>{setTimeout(()=>setPreLoad(false), 500)}, []);
 
@@ -34,7 +36,9 @@ export const Login = () => {
             </> 
             : !errMsg && !loading && <Welcome/>}
             {succesAssign && 
-              <div className={styles.containerModal}><ModalSuccesAssign/></div>}
+              <div className={styles.containerModal}>
+                <ModalSuccesAssign/>
+              </div>}
           <BottomSec/>
         </>}
     </div>

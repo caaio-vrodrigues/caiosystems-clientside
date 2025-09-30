@@ -1,5 +1,4 @@
 'use client';
-
 import { createContext, useState } from 'react';
 import { 
   type ReactNode, type Dispatch, type SetStateAction,
@@ -34,7 +33,8 @@ export const ContextMaster = createContext<TContextMaster>({
   succesAssign: false, setSuccessAssign: ()=>{},
 });
 
-export const ContextProvider = ({ children }: ProviderProps): React.ReactNode =>{
+export const ContextProvider = (props: ProviderProps): React.ReactNode => {
+  const { children } = props;
   const [endPreview, setEndPreview] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [errMsg, setErrMsg] = useState<string|null>(null);

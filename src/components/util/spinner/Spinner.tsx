@@ -5,7 +5,7 @@ type Props = {
   login: boolean,
 }
 
-export const Spinner = ({ login }: Props) => 
+export const Spinner = ({ login }: Props) =>
   <span
     className={`${styles.spinner} ${login && styles.spinnerLogin}`}
     role='status'

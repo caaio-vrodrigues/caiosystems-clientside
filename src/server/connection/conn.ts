@@ -45,6 +45,7 @@ export const createUser = async ({ username, password }: Props) => {
 export const checkAuth = async () => {
   const response = await fetch(`${SERVER_URL}/user/auth`, {
     method: 'GET',
+    credentials: 'include',
   });
   return handleResponse(response);
 };

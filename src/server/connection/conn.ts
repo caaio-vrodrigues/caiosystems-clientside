@@ -38,7 +38,7 @@ export const createUser = async ({ username, password }: Props) => {
       username: username,
       password: password,
     }).toString(),
-    credentials: 'include',
+    credentials: 'omit',
   });
   return handleResponse(response);
 }

@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
-import styles from './ModalSuccesAssign.module.css';
 import { useContext } from 'react';
 import { ContextMaster } from '@/context/ContextProvider';
+import styles from './ModalSuccesAssign.module.css';
 
 export const ModalSuccesAssign = () => {
   const { setSuccessAssign } = useContext(ContextMaster);

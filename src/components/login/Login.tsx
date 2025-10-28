@@ -5,11 +5,11 @@ import { TopSec } from './top-sec/TopSec';
 import { NewAccount } from './new-account/NewAccount';
 import { useContext, useEffect, useState } from 'react';
 import { ContextMaster } from '@/context/ContextProvider';
-import styles from './Login.module.css';
 import { Welcome } from '../login/welcome/Welcome';
 import { Error } from '../util/error/Error';
 import { Wait } from '../util/wait/Wait';
 import { ModalSuccesAssign } from '../util/modal/ModalSuccesAssign';
+import styles from './Login.module.css';
 
 export const Login = () => {
   const [ preLoad, setPreLoad ] = useState<boolean>(true);

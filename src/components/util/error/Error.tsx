@@ -1,8 +1,8 @@
 import { ContextMaster } from '@/context/ContextProvider';
-import styles from './Error.module.css';
 import { useContext } from 'react';
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from './Error.module.css';
 
 export const Error = () => {
   const { errMsg, setErrMsg } = useContext(ContextMaster);

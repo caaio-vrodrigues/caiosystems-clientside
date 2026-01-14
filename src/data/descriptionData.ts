@@ -14,13 +14,13 @@ export const cardInfos = [
   {
     id: 2,
     text: 'Código fonte do backend: ',
-    link: 'https://github.com/caaio-vrodrigues/crud-springboot',
+    link: 'https://github.com/caaio-vrodrigues/caiosystems-serverside',
     linkTxt: 'backend-github',
   },
   {
     id: 3,
     text: 'Código fonte do frontend: ',
-    link: 'https://github.com/caaio-vrodrigues/projeto-login-client-side',
+    link: 'https://github.com/caaio-vrodrigues/caiosystems-clientside',
     linkTxt: 'frontend-github',
   },
 ];

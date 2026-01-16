@@ -8,7 +8,7 @@ export const Welcome = () =>
     </div>
     <div className={styles.videoBlock}>
       <iframe
-        src='https://www.youtube.com/embed/weA80EhtCHs'
+        src='https://www.youtube.com/embed/IkoLuh03t6I'
         title='Apresentação: Seja bem-vindo'
         loading='lazy'
         referrerPolicy='strict-origin-when-cross-origin'

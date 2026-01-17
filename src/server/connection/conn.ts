@@ -20,8 +20,8 @@ export const loginAcces = async ({ username, password }: Props) => {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: new URLSearchParams({
-      username: username,
-      password: password,
+      username: username.trim(),
+      password: password.trim(),
     }).toString(),
     credentials: 'include',
   });

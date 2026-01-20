@@ -20,4 +20,3 @@ const RootLayout = ({ children }: Props) =>
   </html>
 
 export default RootLayout;
- 
